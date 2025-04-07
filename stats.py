@@ -10,7 +10,7 @@ def get_num_words(book_text):
 
 # accept string book text and return character counts
 def count_characters(book_text):
-    # empty dictionary for characterc count
+    # empty dictionary for character count
     char_count = {}
     
     for characters in book_text:

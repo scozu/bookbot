@@ -8,12 +8,19 @@ def get_book_text(path_to_file):
     
 def print_report(path, word_count, sorted_characters):
     print("============ BOOKBOT ============")
-    print(f"Analyzing book found at {path}")
+    print(f"Analyzing book found at {path}...")
     print("----------- Word Count ----------")
     print(f"Found {word_count} total words")
     print("--------- Character Count -------")
 
-    # for
+    # loop through sorted dictionary to print counts
+    for char_dicts in sorted_characters:
+        char = char_dicts["char"]
+        count = char_dicts["count"]
+        if char.isalpha():
+            print(f"{char}: {count}")
+    
+    print("============= END ===============")
 
 # Main function that reads the book text from a file, analyzes it 
 # using stats functions, and outputs the results to the console
